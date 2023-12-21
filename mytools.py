@@ -9,7 +9,7 @@ import plotly.express as px
 plt.rcParams["font.sans-serif"] = ["SimHei"]  # 设置字体
 
 
-def 读取SPSS数据文件(文件位置及名称, 是否保留标签值: bool):
+def 读取SPSS数据文件(文件位置及名称, 是否保留标签值: bool = True):
     数据表, metadata = pyreadstat.read_sav(
         文件位置及名称, apply_value_formats=是否保留标签值, formats_as_ordered_category=True)
     return 数据表
